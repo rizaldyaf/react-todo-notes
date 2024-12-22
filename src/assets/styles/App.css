@@ -1,0 +1,175 @@
+*{
+  box-sizing: border-box;
+}
+
+:focus{
+  outline:none
+}
+
+::-webkit-scrollbar {
+  width:8px; /* Adjust the width as needed */
+  background-color: transparent; /* Background color of the scrollbar track */
+  transition: 0.2s ease-out;
+}
+
+/* The scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,0.5); /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Adjust the border radius as needed */
+}
+
+/* Optional: Set a hover effect on the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+  width: 10px;
+  background-color: rgba(255,255,255,0.8); /* Hover color */
+}
+
+/* Optional: Hide the scrollbar track when not interacting */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@font-face {
+  font-family: "FluentIcons";
+  src: url("../fonts/FluentIcons.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Fluent";
+  src: url("../fonts/Fluent.ttf") format("truetype");
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Adjust the initial vertical offset */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* body{
+  background-color: #111;
+} */
+
+.windowControl{
+  position:fixed;
+  display: flex;
+  top:0px;
+  right:0px;
+  z-index: 2;
+}
+
+.windowControl>button{
+  width:45px;
+  height:30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "FluentIcons";
+  font-size:7pt;
+  background-color: transparent;
+  border: none;
+  color:#fff;
+}
+
+.windowControl>button:hover{
+  background-color: rgba(255,255,255,0.2);
+}
+
+.windowControl>button.close:hover{
+  background-color: red ;
+}
+
+.main{
+  height:100vh;
+  width:100%;
+  display: flex;
+}
+
+.content {
+  margin-top:45px;
+  border-top-left-radius: 10px;
+  background-color: #282828;
+  flex-grow: 1;
+  height: calc(100vh - 45px);
+  display: flex;
+  flex-direction: column;
+  font-family: "Fluent";
+  color: white;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.button-icon{
+  display: flex;
+  background-color: lightgreen;
+  height: 40px;
+  border-radius: 5px;
+  padding: 5px 15px;
+  align-items: center;
+  color:#333;
+  gap:10px;
+  font-size: 1em;
+  transition: 0.3s ease-out;
+  border:none;
+}
+
+.button-icon>.icon{
+  font-family: "FluentIcons";
+}
+
+.button-icon:hover{
+  box-shadow: 0px 3px 5px rgba(144, 238, 144, 0.2);
+}
+
+.button-icon:active{
+  opacity:0.8
+}
+
+.button-icon>.label{
+  font-family: "Fluent";
+  font-weight: bold;
+  line-height: 1;
+  padding-bottom: 2px;
+  font-size: 0.9em;
+}
+
+.splash-screen{
+  width:100vw;
+  height:100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top:40px;
+}
+
+.splash-screen>.logo{
+  padding:10px
+}
+
+.splash-screen>.logo>img{
+  width:80px;
+  height:80px;
+}
