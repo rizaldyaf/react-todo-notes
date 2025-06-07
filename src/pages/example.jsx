@@ -4,23 +4,6 @@ import withStyles from 'react-jss'
 class Example extends Component {
   render() {
     const {classes} = this.props
-    // const items = [
-    //     {
-    //       "title": "Simple Notes",
-    //       "desc": "Create quick and easy notes to capture your thoughts, ideas, and important information. Whether it's a reminder or a burst of creativity, jot it down effortlessly.",
-    //       "icon": <>&#xe70b;</>
-    //     },
-    //     {
-    //       "title": "Checklist Notes",
-    //       "desc": "Stay organized with checklist notes. Break down tasks into manageable steps, track your progress, and enjoy the satisfaction of ticking off completed items.",
-    //       "icon": <>&#xeadf;</>
-    //     },
-    //     {
-    //       "title": "Kanban Style Board",
-    //       "desc": "Visualize your workflow with our Kanban style board. Move tasks seamlessly through stages, from 'To-Do' to 'Done.' Enhance your productivity and keep everything in perspective.",
-    //       "icon": <>&#xf26d;</>
-    //     }
-      // ]
     return (
       <div className={classes.container}>
         <div className='header'>
@@ -29,7 +12,6 @@ class Example extends Component {
         <div className='pageContent'>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt rerum sapiente fugiat reprehenderit quo voluptas repudiandae nostrum molestias ex. Tenetur, cupiditate.
         </div>
-        
       </div>
     )
   }

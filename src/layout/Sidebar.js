@@ -8,6 +8,8 @@ class Sidebar extends Component {
     handleNew = () => {
         if (this.props.router.location.pathname.includes("/notes")) {
             this.props.router.navigate("/notes/new?ref=notes")
+        } else if (this.props.router.location.pathname.includes("/checklists")) {
+            this.props.router.navigate("/checklists/new?ref=checklists")
         } else {
             this.props.router.navigate("/notes/new")
         }

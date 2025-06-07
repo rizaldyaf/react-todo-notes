@@ -18,6 +18,7 @@ import AppIcon from './assets/img/icon.png';
 import { connect } from 'react-redux';
 import { mapDispatchToProps, mapStateToProps } from './redux/redux';
 import axios from 'axios';
+import CheckComposer from './components/CheckComposer';
 
 class App extends Component {
   state = {
@@ -107,6 +108,7 @@ class App extends Component {
                 <Route exact path="/notes" Component={notes}/>
                 <Route path="/notes/:id?" Component={Composer}/>
                 <Route exact path="/notes/new" Component={Composer}/>
+                <Route exact path="/checklists/new" Component={CheckComposer}/>
               </Routes>
             </div>
           </div>
